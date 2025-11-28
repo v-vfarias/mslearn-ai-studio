@@ -12,48 +12,59 @@ This exercise takes approximately **30** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may experience some unexpected behavior, warnings, or errors.
 
-## Open Microsoft Foundry portal
+## Open Microsoft Foundry Portal
 
 Let's start by signing into Foundry portal.
 
 1. In a web browser, open the [Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
+    ![Screenshot of Foundry portal.](./media/microsoft-foundry-home.png)
 
 1. Review the information on the home page.
 
 ## Create a project
 
-An Azure AI *project* provides a collaborative workspace for AI development. Let's start by choosing a model that we want to work with and creating a project to use it in.
+An Azure AI *project* provides a collaborative workspace for AI development. Let's start by selecting the **New Foundry** toggle on top of the page **on**.
 
-> **Note**: AI Foundry projects can be based on an *Foundry* resource, which provides access to AI models (including Azure OpenAI), Azure AI services, and other resources for developing AI agents and chat solutions. Alternatively, projects can be based on *AI hub* resources; which include connections to Azure resources for secure storage, compute, and specialized tools. Foundry based projects are great for developers who want to manage resources for AI agent or chat app development. AI hub based projects are more suitable for enterprise development teams working on complex AI solutions.
+> **Note**: Microsoft Foundry projects can be based on an *Foundry* resource, which provides access to AI models (including Azure OpenAI), Azure AI services, and other resources for developing AI agents and chat solutions. Alternatively, projects can be based on *AI hub* resources; which include connections to Azure resources for secure storage, compute, and specialized tools. Foundry based projects are great for developers who want to manage resources for AI agent or chat app development. AI hub based projects are more suitable for enterprise development teams working on complex AI solutions.
 
-1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
-1. In the search results, select the **gpt-4o** model to see its details, and then at the top of the page for the model, select **Use this model**.
 1. When prompted to create a project, enter a valid name for your project and expand **Advanced options**.
 1. Select **Customize** and specify the following settings for your project:
-    - **Foundry resource**: *A valid name for your Foundry resource*
+    - **Microsoft Foundry resource**: *A valid name for your Microsoft Foundry resource*
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Create or select a resource group*
-    - **Region**: *Select any **AI Foundry recommended***\*
+    - **Region**: *Select any **Microsoft Foundry recommended***\*
 
-    > \* Some Azure AI resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
+    > \* Some Microsoft Foundry resources are constrained by regional model quotas. In the event of a quota limit being exceeded later in the exercise, there's a possibility you may need to create another resource in a different region.
 
-1. Select **Create** and wait for your project to be created. If prompted, deploy the gpt-4o model using the **Global standard** deployment type and customize the deployment details to set a **Tokens per minute rate limit** of 50K (or the maximum available if less than 50K).
+1. Select **Create** and wait for your project to be created.
+
+## Choose a model
+1. Once redirected to the project page select **Start building** and select **Browse models**.
+
+    ![Screenshot of Foundry portal.](./media/microsoft-foundry-project.png)
+
+1. On the search bar insert `gpt-4o` and select the model.
+
+1. On the model's detail page, select the **Deploy** menu and choose the **Custom settings**.
+
+1. Ensure it contains the following configurations:
+    - **Deployment name**: gpt-4o (or any other name desired).
+    - **Deployment type**: Make sure to select **Global Standard**
+    - **Token per Minute Rate Limit**: Adjust it to 50,000.
+    - **Guardrails**: DefaultV2
 
     > **Note**: Reducing the TPM helps avoid over-using the quota available in the subscription you are using. 50,000 TPM should be sufficient for the data used in this exercise. If your available quota is lower than this, you will be able to complete the exercise but you may experience errors if the rate limit is exceeded.
 
-1. When your project is created, the chat playground will be opened automatically so you can test your model:
+1. Click in **Deploy** and wait for the deployment to complete, and be redirected into the newly deployed model.
 
-    ![Screenshot of a Foundry project chat playground.](./media/ai-foundry-chat-playground.png)
+    ![Screenshot of a Foundry project chat playground.](./media/microsoft-foundry-chat-playground.png)
 
-1. In the navigation pane on the left, select **Overview** to see the main page for your project; which looks like this:
+1. In the navigation pane on the left, select the Microsoft Foundry at the top left to see the main page for your project.
 
-    ![Screenshot of a Foundry project overview page.](./media/ai-foundry-project.png)
+1. At the top right of the page, select the menu where your project name is displayed and select **View all resources**. The management center is where you can configure settings at both the *resource* and *project* levels; which are both shown in the navigation pane.
 
-1. At the bottom of the navigation pane on the left, select **Management center**. The management center is where you can configure settings at both the *resource* and *project* levels; which are both shown in the navigation pane.
-
-    ![Screenshot of the Management center page in Foundry portal.](./media/ai-foundry-management.png)
+    ![Screenshot of the Management center page in Foundry portal.](./media/microsoft-foundry-management.png)
 
     The *resource* level relates to the **Foundry** resource that was created to support your project. This resource includes connections to Azure AI Services and Foundry models; and provides a centralplace to manage user access to AI development projects.
 
@@ -94,7 +105,7 @@ Now that you know something about the configuration of your Foundry project, you
 1. Apply the changes to update the system message.
 1. In the chat window, enter a query such as `What are the key events in the history of Scotland?` and view the response:
 
-    ![Screenshot of the playground in Foundry portal.](./media/ai-foundry-playground.png)
+    ![Screenshot of the playground in Foundry portal.](./media/microsoft-foundry-playground.png)
 
 ## Summary
 

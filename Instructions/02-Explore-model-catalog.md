@@ -20,7 +20,7 @@ Let's start by signing into Foundry portal and exploring some of the available m
 
 1. In a web browser, open the [Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in using your Azure credentials. Close any tips or quick start panes that are opened the first time you sign in, and if necessary use the **Foundry** logo at the top left to navigate to the home page, which looks similar to the following image (close the **Help** pane if it's open):
 
-    ![Screenshot of Foundry portal.](./media/ai-foundry-home.png)
+    ![Screenshot of Foundry portal.](./media/microsoft-foundry-home.png)
 
 1. Review the information on the home page.
 1. In the home page, in the **Explore models and capabilities** section, search for the `gpt-4o` model; which we'll use in our project.
@@ -81,7 +81,7 @@ To use a model, you need to create a Foundry *project*.
 
 1. When your project is created, the chat playground will be opened automatically so you can test your model:
 
-    ![Screenshot of a Foundry project chat playground.](./media/ai-foundry-chat-playground.png)
+    ![Screenshot of a Foundry project chat playground.](./media/microsoft-foundry-chat-playground.png)
 
 ## Chat with the *gpt-4o* model
 
